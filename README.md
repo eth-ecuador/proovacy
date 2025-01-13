@@ -111,8 +111,3 @@ sequenceDiagram
     W-->>FE: Return Wallet Details
     FE-->>U: Complete Onboarding
 ```
-## Contributing to Scaffold-Stark
-
-We welcome contributions to Scaffold-Stark!
-
-Please see [CONTRIBUTING.MD](https://github.com/Scaffold-Stark/scaffold-stark-2/blob/main/CONTRIBUTING.md) for more information and guidelines for contributing to Scaffold-Stark.
