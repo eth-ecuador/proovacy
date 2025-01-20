@@ -4,6 +4,11 @@ import {
   exportDeployments,
   deployer,
 } from "./deploy-contract";
+import {
+  deployReferralContract,
+  executeDeployCalls as executeReferralCalls,
+  exportDeployments as exportReferralDeployments,
+} from "./deploy-referral";
 import { green } from "./helpers/colorize-log";
 
 /**
@@ -48,18 +53,48 @@ const deployScript = async (): Promise<void> => {
       owner: deployer.address,
     },
   });
+
+  // Deploy ReferralContract
+  await deployReferralContract({
+    contract: "ReferralContract",
+  });
 };
+
+// deployScript()
+//   .then(async () => {
+//     executeDeployCalls()
+//       .then(() => {
+//         exportDeployments();
+//         console.log(green("All Setup Done"));
+//       })
+//       .catch((e) => {
+//         console.error(e);
+//         process.exit(1); // exit with error so that non subsequent scripts are run
+//       });
+//   })
+//   .catch(console.error);
 
 deployScript()
   .then(async () => {
+    // First deploy YourContract
     executeDeployCalls()
       .then(() => {
         exportDeployments();
-        console.log(green("All Setup Done"));
+        // Then deploy ReferralContract
+        executeReferralCalls()
+          .then(() => {
+            exportReferralDeployments();
+            console.log(green("All Contracts Setup Complete"));
+          })
+          .catch((e) => {
+            console.error(e);
+            process.exit(1);
+          });
       })
       .catch((e) => {
         console.error(e);
-        process.exit(1); // exit with error so that non subsequent scripts are run
+        process.exit(1);
       });
   })
   .catch(console.error);
+

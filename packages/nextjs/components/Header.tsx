@@ -47,11 +47,11 @@ export const menuLinks: HeaderMenuLink[] = [
   //   label: 'Reclaim Demo',
   //   href: '/reclaimDemo',
   // },
-  // {
-  //   label: 'Debug Contracts',
-  //   href: '/debug',
-  //   icon: <BugAntIcon className='h-4 w-4' />,
-  // },
+  {
+    label: 'Debug Contracts',
+    href: '/debug',
+    icon: <BugAntIcon className='h-4 w-4' />,
+  },
 ]
 
 export const HeaderMenuLinks = () => {
