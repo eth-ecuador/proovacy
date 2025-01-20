@@ -131,13 +131,12 @@ The Proovacy project is built using the following technologies and protocols:
 - **Frontend**  
   Developed with **Next.js**, a React framework for building web applications.
 
-- **Backend**  
-  Implemented with **Node.js**, a JavaScript runtime environment for server-side applications.
-
 - **Blockchain**  
   Integrated with **Starknet**, a layer-2 scalability solution for Ethereum. **Cairo**, the programming language specifically designed for Starknet smart contracts, is used to implement on-chain logic and interactions.
 
-
+- **SDK Argent Wallet**  
+  Proovacy utilizes the **Argent Wallet SDK**, a smart wallet designed for Starknet.
+  
 - **Reclaim Protocol**  
   Proovacy integrates **Reclaim Protocol**, a decentralized protocol that allows users to prove ownership of accounts, data, or assets from third-party platforms without sharing sensitive credentials.  
   This protocol enables:  
@@ -152,6 +151,10 @@ The Proovacy project is built using the following technologies and protocols:
   - An extensible frontend connected to Starknet wallets.  
   - Development tools for testing and deploying smart contracts.  
 
+- **SDK Argent Wallet**  
+  Proovacy utilizes the **Argent Wallet SDK**, a smart wallet designed for Starknet. It offers:  
+  - **Seamless Starknet integration** for fast, low-cost transactions.  
+  - **Wallet connection capabilities**, allowing users to easily connect their Argent wallet to the Proovacy platform to perform the verification test.
 ---
 
 ## **Additional Resources**
